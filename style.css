@@ -24,6 +24,9 @@ body {
   background-repeat: no-repeat, no-repeat;
   background-position: top 0.75em center, left bottom -1em;
   background-attachment: fixed;
+}
+
+main {
   overflow: hidden;
 }
 
@@ -52,7 +55,7 @@ body {
 
 .avatar-toggle-pre {
   display: inline-block;
-  animation: showAvatarPre 0.6s;
+  animation: showAvatarPre 0.7s;
 }
 
 @keyframes showAvatarPre {
@@ -94,6 +97,7 @@ body {
   background-color: white;
   border: none;
   cursor: pointer;
+  margin: 0 -0.5px;
 }
 
 .preBtn {
@@ -206,10 +210,15 @@ body {
   .avatar {
     width: 95%;
   }
-  .testimonial-wording-group {
-    flex: 1;
+  .testimonial-btn {
+    transform: translate(-26%, calc(-50% - 8px));
+  }
+  .testimonial-btn button {
+    width: 55px;
+    height: 55px;
   }
   .testimonial-wording-group {
+    flex: 1;
     background-size: 3.8em;
     background-position: top left 3em;
   }
@@ -225,9 +234,5 @@ body {
   .testimonial-wording p {
     font-size: 0.6em;
     display: inline-block;
-  }
-  .testimonial-btn button {
-    width: 55px;
-    height: 55px;
   }
 }
