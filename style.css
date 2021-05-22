@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
+:root {
+  --Dark-Blue: hsl(240, 38%, 20%);
+  --Grayish-Blue: hsl(240, 18%, 77%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+}
+
+body {
+  background-image: url("./images/pattern-bg.svg"),
+    url("./images/pattern-curve.svg");
+  background-size: min(85%, 650px), min(100%, 650px);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top 0.75em center, left bottom -1em;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+/* testimonial */
+
+.testimonial {
+  width: min(80%, 650px);
+  margin: 1.7em auto 1em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* avatar */
+
+.avatar-group {
+  text-align: center;
+}
+
+.avatar {
+  width: min(84.5%, 535px);
+  border-radius: 5px;
+  box-shadow: 0px 10px 50px hsla(240, 37%, 20%, 0.4);
+  display: none;
+}
+
+.avatar-toggle-pre {
+  display: inline-block;
+  animation: showAvatarPre 0.6s;
+}
+
+@keyframes showAvatarPre {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.avatar-toggle-next {
+  display: inline-block;
+  animation: showAvatarNext 0.7s;
+}
+
+@keyframes showAvatarNext {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* testimonial-btn */
+
+.testimonial-btn {
+  display: flex;
+  justify-content: center;
+  transform: translateY(calc(-50% - 8px));
+}
+
+.testimonial-btn button {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.preBtn {
+  border-radius: 30px 0 0 30px;
+}
+
+.nextBtn {
+  border-radius: 0 30px 30px 0;
+}
+
+.arrow:hover {
+  transform: scale(1.2);
+}
+
+/* testimonial-wordings */
+
+.testimonial-wording-group {
+  z-index: 1;
+  background-image: url("./images/pattern-quotes.svg");
+  background-repeat: no-repeat;
+  background-size: 2em;
+  background-position: top 0.1em center;
+}
+
+.testimonial-wording {
+  text-align: center;
+  padding-top: 1em;
+  display: none;
+}
+
+.testimonial-wording-toggle-pre {
+  display: block;
+  animation: showWordingsPre 0.5s;
+}
+
+@keyframes showWordingsPre {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.testimonial-wording-toggle-next {
+  display: block;
+  animation: showWordingsNext 0.5s;
+}
+
+@keyframes showWordingsNext {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.testimonial-wording h1 {
+  font-size: 0.55em;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 1em;
+  color: var(--Dark-Blue);
+}
+
+.testimonial-wording p {
+  font-size: 0.48em;
+}
+
+.testimonial-wording p:nth-of-type(1) {
+  color: var(--Dark-Blue);
+  font-weight: 700;
+}
+
+.testimonial-wording p:nth-of-type(2) {
+  color: var(--Grayish-Blue);
+}
+
+/* attribution */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 1em;
+  color: var(--Grayish-Blue);
+}
+
+.attribution a {
+  color: var(--Dark-Blue);
+  text-decoration: none;
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    background-image: url("./images/pattern-bg.svg"),
+      url("./images/pattern-curve.svg");
+    background-size: min(85%, 700px), min(100%, 650px);
+    background-position: top 1.5em right 2em, left bottom;
+  }
+  .testimonial {
+    width: min(78%, 1150px);
+    margin: 3.5em auto 1em;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  .testimonial-header {
+    flex: 1;
+  }
+  .avatar {
+    width: 95%;
+  }
+  .testimonial-wording-group {
+    flex: 1;
+  }
+  .testimonial-wording-group {
+    background-size: 3.8em;
+    background-position: top left 3em;
+  }
+  .testimonial-wording {
+    text-align: left;
+    padding: 2em 0;
+  }
+  .testimonial-wording h1 {
+    font-size: 1em;
+    margin-bottom: 0.8em;
+    margin-right: -2em;
+  }
+  .testimonial-wording p {
+    font-size: 0.6em;
+    display: inline-block;
+  }
+  .testimonial-btn button {
+    width: 55px;
+    height: 55px;
+  }
+}
