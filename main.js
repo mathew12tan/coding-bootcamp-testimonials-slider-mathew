@@ -3,31 +3,17 @@ const testimonials = [
     imgSrc: './images/image-tanya.jpg',
     imgAlt: 'image-tanya',
     intro: '" I’ve been interested in coding for a while but never taken the jump, until now. I couldn’t recommend this course enough. I’m nowin the job of my dreams and so excited about the future. "',
-    person: 'Tanya Sinclair1',
+    person: 'Tanya Sinclair',
     title: 'UX Engineer'
   },
   {
     imgSrc: './images/image-john.jpg',
     imgAlt: 'image-john',
     intro: '" If you want to lay the best foundation possible I’d recommend taking this course. The depth the instructors go into isincredible. I now feel so confident about starting up as a professional developer. "',
-    person: 'John Tarkpor2',
-    title: 'Junior Front-end Developer'
-  },
-  {
-    imgSrc: './images/image-tanya.jpg',
-    imgAlt: 'image-tanya',
-    intro: '" I’ve been interested in coding for a while but never taken the jump, until now. I couldn’t recommend this course enough. I’m nowin the job of my dreams and so excited about the future. "',
-    person: 'Tanya Sinclair3',
-    title: 'UX Engineer'
-  },
-  {
-    imgSrc: './images/image-john.jpg',
-    imgAlt: 'image-john',
-    intro: '" If you want to lay the best foundation possible I’d recommend taking this course. The depth the instructors go into isincredible. I now feel so confident about starting up as a professional developer. "',
-    person: 'John Tarkpor4',
+    person: 'John Tarkpor',
     title: 'Junior Front-end Developer'
   }
-]
+ ]
 
 const avatarGroup = document.querySelector('.avatar-group');
 const testimonialWordingGroup = document.querySelector('.testimonial-wording-group');
